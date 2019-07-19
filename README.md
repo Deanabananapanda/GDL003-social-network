@@ -1,4 +1,5 @@
 # Creando una Red Social
+## SholoFood
 
 ### ¿Cuáles son los elementos básicos que tiene una red social?
 Tienen como finalidad principal poner en contacto a personas, de tal forma que a través de la plataforma electrónica se facilite la conexión de forma sencilla y rápida.
@@ -12,13 +13,32 @@ Permiten un contacto ilimitado entre los usuarios, en la medida en que el concep
 Fomentan la difusión viral de la red social a través de cada uno de los usuarios que la componen, empleando este método como principal forma de crecimiento del número de usuarios.
 
 ###¿Quiénes son los principales usuarios de producto?
-Muejeres/Hombres  
+Muejeres/Hombres  con nocion basica acerca de redes sociales (facebook e instagram) que son amantes de la comida callejera.
+
 ###¿Cómo descubriste las necesidades de los usuarios?
+Por medio de encuestas y test.
+
 ###¿Qué problema resuelve el producto para estos usuarios?
+Para el usuario, el tener una red social donde publicar tus lugares favoritos callejeros  para asi beneficiar también al propietario del mismo e impulsar los pequeños negocios locales.
 ###¿Cuáles son los objetivos de estos usuarios en relación con el producto?
+Impulsar los pequeños negocios.
 ###¿Cuáles son las principales funcionalidades del producto y cuál es su prioridad?
+- Hacer publicaciones.
+- Editar, Borrar dicha publicaciones.
+- Buscar su comida favorita por medio de hashtag.
+- Poder acceder a la red social por medio de facebook o gmail.
+- Poder crear una cuenta en la misma.
 ###¿Cómo verificaste que el producto les está resolviendo sus problemas?
+Enfocandonos en el usuario y haciendo cambios si son necesarios por medio de feedback.
 ###¿Cómo te asegurarás que estos usuarios usen este producto?
+Por la interfaz fácil de usar y por la facilidad que tendrás de encontrar comida.
+
+#ENCUESTA:
+https://forms.gle/YVBY9si5MXWDVF1dA
+
+#PROTOTIPO DE BAJA FIDELIDAD:
+
+#PROTOTIPO DE ALTA FIDELIDAD:
 
 
 ## Entrega
