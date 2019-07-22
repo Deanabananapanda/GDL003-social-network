@@ -1,7 +1,6 @@
 document.querySelector(".joingPage").style.display="block";
 
 const login = document.getElementById('login');
-
 login.addEventListener("click", ()=>{
     document.querySelector(".joingPage").style.display="none";
     document.querySelector(".loginPage").style.display="block";
