@@ -1,3 +1,19 @@
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBrQLBX60ZVpF3iY-Y6pL9zl1RvgSZugBM",
+            authDomain: "sholofood.firebaseapp.com",
+            databaseURL: "https://sholofood.firebaseio.com",
+            projectId: "sholofood",
+            storageBucket: "",
+            messagingSenderId: "1091396395821",
+            appId: "1:1091396395821:web:3cc0733077f135c2"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+
+
 /*
 //information of users predeterminado
 // Only authenticated users can read or write to the bucket
