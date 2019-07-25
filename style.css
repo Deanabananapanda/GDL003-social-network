@@ -1,6 +1,48 @@
-.button{
-  background-color: blue;
-  font-size: 21px;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background-color: white;
+  color:black;
+  font-family: Open Sans;
   text-align: center;
-  border-radius: 21px;
+
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: linear-gradient(to right, rgba(248, 113, 113, 0.685),rgba(255, 194, 80, 0.548),rgba(250, 250, 0, 0.507),rgba(88, 214, 88, 0.432),rgba(5, 167, 231, 0.473),rgba(76, 0, 130, 0.329));
+  }
+  
+  .active {
+    background-image: linear-gradient(to right, rgba(248, 113, 113, 0.685),rgba(255, 194, 80, 0.548),rgba(250, 250, 0, 0.507),rgba(88, 214, 88, 0.432),rgba(5, 167, 231, 0.473),rgba(76, 0, 130, 0.329));
+  }
+
+  .paginaMuro {
+      width: 100%;
+  }
+  .muro {
+      width: 35%;
+      margin: auto;
+  }
+
+  .home {
+    background-image: url("https://image.flaticon.com/icons/svg/25/25694.svg");
+  }

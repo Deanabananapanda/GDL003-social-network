@@ -1,0 +1,23 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "### ¿Cuáles son los elementos básicos que tiene una red social? Tienen como finalidad principal poner en contacto a personas, de tal forma que a través de la plataforma electrónica se facilite la conexión de forma sencilla y rápida.",
+  "main": "main.js",
+  "dependencies": {
+    "firebase": "^6.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deanabananapanda/GDL003-social-network.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deanabananapanda/GDL003-social-network/issues"
+  },
+  "homepage": "https://github.com/Deanabananapanda/GDL003-social-network#readme"
+}

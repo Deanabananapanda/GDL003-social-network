@@ -1,80 +1,63 @@
 <!DOCTYPE html>
-<html lang="es">
+    <html lang="es">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sholofood</title>
         <link rel="stylesheet" href="style.css" />
-
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     </head>
-
     <body>
-        <Section class="mainPage">
-            <!-- Joing Page -->
-            <div class="joingPage" style="display:none">
-                <a href=></a>
-                <button id=login class="button">Inicia Sesion</button>
-                <label for="btnLogin">Inicia Sesion con:</label>
-                    <button id=loginWFacebook class="button btnLogin">Facebook</button>
-                    <button id=loginWGmail class="button btnLogin">@gmail</button>
-                <button id=register class="button">Registrate</button>
-            </div>        
-        </Section>
-
-            <!-- Login Page -->
-        <Section class="loginPage" style="display:none">
-                <label for="emailUser">Email:</label>
-                    <input type="text" class="emailUser" placeholder="Ingresa tu correo">
-                <label for="passwordUser">Contraseña:</label>
-                    <input type="password" class="passwordUser" placeholder="Escribe tu contraseña">
-                <button class="button">Ingresar</button>  
-        </Section>
-
-            <!-- Register Page-->
-        <Section class="registerPage" style="display:none">
-                <form class="registerForm">
-                    <label for="name">Nombre:</label>
-                        <input type="text" class="name" placeholder="Ingresa tu nombre">
-                    <label for="lastName">Apellido:</label>
-                        <input type="text" class="lastName" placeholder="Ingresa tu apellido">
-                    <label for="email">Email:</label>
-                        <input type="text" class="email" placeholder="Escribe tu correo">
-                    <label for="password">Contraseña:</label>
-                        <input type="password" class="password" placeholder="Escribe tu contraseña">
-                    <label for="passwordReplay">Confirmar contraseña:</label>
-                        <input type="password" class="passwordReplay" placeholder="Escribe tu contraseña">
-                    <button id=confirmRegister class=button>Aceptar</button>
-                </form>
-        </Section>    
-        
-        
-        <section class="showData" style="display:none">
-            <!-- Brand -->
-            <header>
-                <a href=></a>
-            </header>
-            
-            <!-- Menu -->
-            <main id="menu" class="menu">
-                <nav class="navigation">
-                    <ul class="nav">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Search</a></li>
-                        <li><a href="">Post</a></li>
-                        <li><a href="">Likes</a></li>
-                        <li><a href="">Profile</a></li>
-                    </ul>
-                </nav>
-            </main>
-            
-            <div id="container" class="container"></div>        
+      <section id="paginaInicio"> 
+        <div id = "introduccion" name="introduccion">
+        <img id = "choloFood" src = "https://i.ibb.co/WKkXhQy/Logo-Sample-By-Tailor-Brands-1.jpg">
+        <div id = "introduccion" name="introduccion">
+            <p> <strong> 
+              ¡Hola! y bienvenida a la Red Social sobre comida <br>
+            donde podrás ver y publicar acerca de tus changarros y <br>
+            puestos de comida favs. <br>
+            <br>
+            Por Favor, inicia sesión:
+            </strong> </p>
+      <div id="contenedorvergas"></div>
+    </section>
+    <section id="paginaMuro" class="paginaMuro" style="display:none">
+      <div id= "muro" name = "muro" class="muro">
+          <ul>
+              <li><a href="#home" class="active">Home </a></li>
+              <li><a href="#buscar">Buscar</a></li>
+              <li><a href="#publicar">Publicar</a></li>
+              <li><a href="#likes">Likes</a></li>
+              <li><a href="#perfil">Perfil</a></li>
+            </ul>
+          </div>
         </section>
-        <script src="main.js"></script>
-        <script src="firebase.js"></script>
-          <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-storage.js"></script>
-    </body>
-</html>
+
+    <section id="home" class="home">
+     
+    </section>
+
+    <section id="buscar" class="Buscar">
+
+    </section>
+
+    <section id="publicar" class="Publicar">
+    <input type="text" id="publication">
+    </section>
+
+    <section id="likes" class="Likes">
+
+    </section>
+
+    <section id="perfil" class="Perfil">
+
+    </section>
+            <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+            <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+            <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+            <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+            <script defer src="./firebase.js"></script>
+          </body>
+          
+          </html>
