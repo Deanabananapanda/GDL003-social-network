@@ -3,51 +3,14 @@ const firebaseConfig = {
   authDomain: "sholofood.firebaseapp.com",
   databaseURL: "https://sholofood.firebaseio.com",
   projectId: "sholofood",
-  storageBucket: "",
+  storageBucket: "sholofood.appspot.com",
   messagingSenderId: "1091396395821",
   appId: "1:1091396395821:web:3cc0733077f135c2",
 };
 firebase.initializeApp(firebaseConfig);
-let uiConfig = {
 
-callbacks: {
-  signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-    // User successfully signed in.
-    // Return type determines whether we continue the redirect automatically
-    // or whether we leave that to developer to handle.
-    return true;
-  },
-  uiShown: function() {
-    // The widget is rendered.
-    // Hide the loader.
-   
-  }
-},
-// Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-signInFlow: 'popup',
-signInSuccessUrl: 'muro.html',
-signInOptions: [
-  // Leave the lines as is for the providers you want to offer your users.
-  firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-  firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-  firebase.auth.EmailAuthProvider.PROVIDER_ID,
-],
-
-// Terms of service url.
-tosUrl: 'index.html',
-// Privacy policy url.
-privacyPolicyUrl: '<your-privacy-policy-url>'
-};
-let ui = new firebaseui.auth.AuthUI(firebase.auth());
-ui.start('#container', uiConfig);
-
-//post para la red social
-/*
-const app = firebase.app();
-const db = firebase.firestore();
-const post = db.collection ('post').doc('wallpost');
-post.get()
-.then (doc => {
-  const data = doc.data();
-  document.write(data.news + )
-})*/
+// Initiate Firebase Auth.
+function initFirebaseAuth() {
+  // Listen to auth state changes.
+  firebase.auth().onAuthStateChanged(authStateObserver);
+}
