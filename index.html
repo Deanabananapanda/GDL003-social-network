@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sholofood</title>
         <link rel="stylesheet" href="style.css" />
-        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
         <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     </head>
     <body>
@@ -20,44 +19,13 @@
             <br>
             Por Favor, inicia sesión:
             </strong> </p>
-      <div id="contenedorvergas"></div>
-    </section>
-    <section id="paginaMuro" class="paginaMuro" style="display:none">
-      <div id= "muro" name = "muro" class="muro">
-          <ul>
-              <li><a href="#home" class="active">Home </a></li>
-              <li><a href="#buscar">Buscar</a></li>
-              <li><a href="#publicar">Publicar</a></li>
-              <li><a href="#likes">Likes</a></li>
-              <li><a href="#perfil">Perfil</a></li>
-            </ul>
-          </div>
-        </section>
-
-    <section id="home" class="home">
-     
-    </section>
-
-    <section id="buscar" class="Buscar">
-
-    </section>
-
-    <section id="publicar" class="Publicar">
-    <input type="text" id="publication">
-    </section>
-
-    <section id="likes" class="Likes">
-
-    </section>
-
-    <section id="perfil" class="Perfil">
-
-    </section>
-            <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
-            <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
-            <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
-            <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
-            <script defer src="./firebase.js"></script>
-          </body>
-          
-          </html>
+        <div id="container"></div>
+      </section>
+          <script src="https://cdn.firebase.com/libs/firebaseui/4.1.0/firebaseui.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+          <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+          <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>
+          <script defer src="./firebase.js"></script>
+          <script defer src="./app.js"></script>
+    </body>
+</html>
