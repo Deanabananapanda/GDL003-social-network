@@ -22,27 +22,94 @@ ul {
   li a {
     display: inline-block;
     color: black;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
-  li a:hover {
-    background-color: linear-gradient(to right, rgba(248, 113, 113, 0.685),rgba(255, 194, 80, 0.548),rgba(250, 250, 0, 0.507),rgba(88, 214, 88, 0.432),rgba(5, 167, 231, 0.473),rgba(76, 0, 130, 0.329));
-  }
-  
-  .active {
-    background-image: linear-gradient(to right, rgba(248, 113, 113, 0.685),rgba(255, 194, 80, 0.548),rgba(250, 250, 0, 0.507),rgba(88, 214, 88, 0.432),rgba(5, 167, 231, 0.473),rgba(76, 0, 130, 0.329));
-  }
-
   .paginaMuro {
       width: 100%;
   }
+
   .muro {
-      width: 35%;
+      width: 30%;
       margin: auto;
   }
 
-  .home {
-    background-image: url("https://image.flaticon.com/icons/svg/25/25694.svg");
+  .wall {
+    background-color: rgba(255, 254, 254, 0.24);
+    background-image: url("https://images.vexels.com/media/users/3/157400/isolated/preview/b4bca87dcb08043c59bb030665e90030-inicio-con-un-icono-de-coraz--n-negro-by-vexels.png");
+    background-size: 1.8rem 1.8rem;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 2rem;
+    height: 2rem;
+    font-size: .7rem;
+    text-align: top;
+    background: cover;
+    font-weight: bold;
+
+  }
+
+  .search{
+    background-color: rgba(255, 254, 254, 0.24);
+    background-image: url("https://cdn2.iconfinder.com/data/icons/e-commerce-icon-set-2/100/ecommerce-collection-outlines-23-512.png");
+    background-size: 1.8rem 1.8rem;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 2rem;
+    height: 2rem;
+    font-size: .7rem;
+    text-align: top;
+    background: cover;
+    font-weight: bold;
+    
+  }
+  .public{
+    background-color: rgba(255, 254, 254, 0.24);
+    background-image: url("https://cdn0.iconfinder.com/data/icons/miscellaneous-40-mix-black/128/cholo_person_man-512.png");
+    background-size: 1.8rem 1.8rem;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 2rem;
+    height: 2rem;
+    font-size: .7rem;
+    text-align: top;
+    background: cover;
+
+  }
+
+  .likes{
+    background-color:rgba(255, 254, 254, 0.24);
+    background-image: url("https://cdn3.iconfinder.com/data/icons/hand-signs/432/rock-alt-512.png");
+    background-size: 1.8rem 1.8rem;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 2rem;
+    height: 2rem;
+    font-size: .7rem;
+    text-align: top;
+    background: cover;
+  }
+
+  .profile{
+    background-image: url("http://cdn.onlinewebfonts.com/svg/img_266351.png");
+    background-size: 1.8rem 1.8rem;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 2rem;
+    height: 2rem;
+    font-size: .7rem;
+    text-align: top;
+    background: cover;
+  }
+  .btnhome{
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+
+  }
+
+  #publication{
+    width: 30rem;
+    height: 30rem;
   }
