@@ -1,76 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muro</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
-    </section>
-    <section id="paginaMuro" class="paginaMuro">
-        <div id="muro" name="muro" class="muro">
-    <img id = "choloFoodMuro" src = "https://i.ibb.co/VQpKnZZ/Logo-Sample-By-Tailor-Brands-5-1.jpg">
-            <ul>
-                <li><a href="#home" id="wall" class="btnhome wall">Muro</a></li>
-                <li><a href="#buscar" class="btnhome search">Buscar</a></li>
-                <li><a href="#publicar" class="btnhome publish">Publicar</a></li>
-                <li><a href="#likes" class="btnhome likes">Likes</a></li>
-                <li><a href="#perfil" class="btnhome profile">Perfil</a></li>
+<header>
+    <div class="container">
+        <img class="responsive-img" id="choloFoodMuro"
+            src="https://i.ibb.co/VQpKnZZ/Logo-Sample-By-Tailor-Brands-5-1.jpg">
+    </div>
+    <div class="container">
+        <div class="row">
+            <ul id="tabs-swipe-demo" class="tabs">
+                <li class="tab col s3"><a href="#home" class="btn tooltipped yellow accent-2 feed"
+                        data-position="bottom" data-tooltip="Muro"><i id="homeImg" class="material-icons">home</a></i>
+                </li>
+                <li class="tab col s3"><a href="#search" class="btn tooltipped yellow accent-2 search"
+                        data-position="bottom" data-tooltip="Buscar"><i id="searchImg"
+                            class="material-icons">search</a></i></li>
+                <li class="tab col s3"><a href="#publish" class="btn tooltipped yellow accent-2 publish"
+                        data-position="bottom" data-tooltip="Publicar"><i id="publishImg"
+                            class="material-icons">whatshot</a></i></li>
+                <!--<li class="tab col s3"><a href="#likes" class="btn tooltipped likes">Favoritos
+                            <i id="likesImg" class="material-icons">favorite</a></i></li>-->
+                <li class="tab col s3"><a href="#profile" class="btn tooltipped yellow accent-2 profile"
+                        data-position="bottom" data-tooltip="Perfil"><i id="profileImg"
+                            class="material-icons">face</a></i></li>
             </ul>
         </div>
-    </section>
+    </div>
+</header>
 
-    <section id="wall" class="wall">
-        <div id="containerPost" class="containerPost"></div>
-    </section>
+<body>
 
-    <section id="buscar" class="Buscar">
+    <div id="home" class="col s12 container"></div>
 
-    </section>
-
-    <section id="publish" class="publish">
-        <label for="publish">¿Que sitio descubriste?</label>
-        <textarea type="textArea" rows="6" cols="70" class="post textPost"
-            placeholder="Escribenos tu experiencia, no olvides incuir un # al nombrar el antojito"></textarea>
-        <textarea type="textArea" rows="4" cols="50" class="post indications"
-            placeholder="Indicaciones de la ubicacion, ejemplo:frente al Zoologico"></textarea>
-
-        <p>Dinos en que zona se localiza!:
-            <select name="zone">
-                <option class="selectZone" value="Guadalajara">Guadalajara</option>
-                <option class="selectZone" value="Zapopan">Zapopan</option>
-                <option class="selectZone" value="Tlaquepaque">Tlaquepaque</option>
-                <option class="selectZone" value="Tonala">Tonala</option>
-                <option class="selectZone" value="Tlajomulco">Tlajomulco</option>
-            </select>
-        </p>
-
-        <section id="statusOfPost">
-            <label for="statusOfPost">Decide quien puede ver tu post!</label>
-            <label><input type="radio" class="status" value="Public">Público</label>
-            <label><input type="radio" class="status" value="Private">Privado</label>
-        </section>
-
-        <button id="saveBtn">Compartir</button>
+    <section id="search">
 
     </section>
 
-    <section id="likes" class="likes">
+    <div id="publish" class="col s12 container">
+        <p for="publish">¿Que sitio descubriste?</p>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textForPost" class="materialize-textarea textPost" data-length="120"></textarea>
+                        <label class="orange-text" for="textForPost">Dinos tu experiencia, incluye # al nombrar antojitos</label>
+                    </div>
+                </div>
+                <p>Indicaciones de la ubicacion:</p>
+                <div class="row">
+                    <div class="input-field col s9">
+                        <input id="indicationsForPost" type="text" class="indications" data-length="60">
+                        <label class="orange-text" for="indicationsForPost">Ejemplo:frente al Zoologico</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <p>Dinos en que zona se localiza!:</p>
+        <select class="browser-default responsive col s6 orange-text">
+            <option value="" disabled selected>Selecciona una opcion</option>
+            <option id="selectZone" value="Guadalajara">Guadalajara</option>
+            <option class="orange-text" id="selectZone" value="Zapopan">Zapopan</option>
+            <option class="orange-text" id="selectZone" value="Tlaquepaque">Tlaquepaque</option>
+            <option class="orange-text" id="selectZone" value="Tonala">Tonala</option>
+            <option class="orange-text" id="selectZone" value="Tlajomulco">Tlajomulco</option>
+        </select>
+
+
+        <p>Decide quien puede ver tu post!</p>
+        <select class="browser-default responsive col s6 orange-text">
+            <option class="orange-text" id="status" value="Public">Público</option>
+            <option class="orange-text" id="status" value="Private">Privado</option>
+        </select>
+        <button id="saveBtn" class="btn waves-effect waves-light orange darken-2" type="submit" name="action">Compartir
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+
+
+    <section id="likes" class="col s12">
 
     </section>
 
-    <section id="profile" class="profile">
-        <div id="containerUserData" class="containerUserData"></div>
-    </section>
 
+    <div id="profile" class="col s12 container"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-storage.js"></script>
     <script src="./firebase.js"></script>
     <script src="./main.js"></script>
+    </div>
 </body>
+
 </html>
