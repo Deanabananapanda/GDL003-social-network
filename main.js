@@ -7,35 +7,62 @@ document.addEventListener("DOMContentLoaded", event => {
 
     const post = db.collection('post');
 
+    const position = 'botom';
+    let elems = document.querySelectorAll('.tooltipped');
+    let instances = M.Tooltip.init(elems, position);
+
+    //var instance = M.Tabs.init(el, options);
+
     //var storage = customApp.storage();
-    let containerPost = document.getElementById("containerPost");
-    let btnWall = document.getElementById("wall");
+    let containerPost = document.getElementById("home");
+    let btnWall = document.querySelector(".feed");
     btnWall.addEventListener('click', () => {
-        db.collection("post").orderBy('timestamp', 'asc').limit(12).get().then((querySnapshot) => {
+        document.getElementById("publish").innerHTML = "";
+        document.getElementById("profile").innerHTML = "";
+        db.collection("post").orderBy('date', 'asc').limit(30).get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 console.log(`${doc.id} => ${doc.data()}`);
                 const userPostData = doc.data();
                 const userPost =
-                    `<div class="card"> +
-                                <img src="${userPostData.profilePicUrl}"> +
-                                <div class="container"> +
-                                    <h4>Name: ${userPostData.name}</h4> +
-                                    <p>Status: ${userPostData.status}</p> +
-                                    <p>Time: ${userPostData.timestamp}</p> +
-                                    <p>Text: ${userPostData.text}</p> +
-                                    <p>Likes: ${userPostData.likes}</p> +
-                                </div> +
+                    `<div class="chip orange accent-2 white-text text-lighten-5 center-align"> 
+                                <img class="circle responsive-img" src="${userPostData.profilePicUrl}">
+                                ${userPostData.name} ${userPostData.date} 
+                                <div class="card panel orange accent-3">
+                                <div class="card-content black-text text-darken-4">
+                                    <p>Status: ${userPostData.status}</p> 
+                                    <p>${userPostData.text}</p>
+                                    <p>Zona: ${userPostData.zone}</p>
+                                    </div>
+                                    </div>
+                                    <div class="chip">
+                                    <button onclick="contadorLikes('${doc.id}')">Laik</button>
+                                   <button class = "editortexto" id ="${doc.id}">Editar</button>
+                                   <button class = "elimarPost" id ="${doc.id}">Eliminar</button>
+                                </div>
                             </div>;`
                 containerPost.innerHTML += userPost
             });
         });
     });
 
+    let btnPublish = document.querySelector(".publish");
+    btnPublish.addEventListener('click', () => {
+        document.getElementById("publish").innerHTML;
+    });
+
+
+    //$(document).ready(function() {
+    //    $('textarea#textForPost, input#indicationsForPost').characterCounter();
+    //});
+
     let textPost = document.querySelector(".textPost");
     let indications = document.querySelector(".indications");
-    let zone = document.querySelector(".selectZone").value;
-    let statusPost = document.querySelector(".status").value;
-    // Saves a new message on the Cloud Firestore.
+    let zone = document.getElementById("selectZone").value;
+    let statusPost = document.getElementById("status").value;
+    let day = new Date().toLocaleDateString();
+    let hour = new Date().toLocaleTimeString();
+    let dates = " ";
+    dates = day + " " + hour;
     let saveBtn = document.getElementById("saveBtn");
     saveBtn.addEventListener('click', () => {
 
@@ -44,8 +71,9 @@ document.addEventListener("DOMContentLoaded", event => {
             name: getUserName(),
             profilePicUrl: getProfilePicUrl(),
             status: statusPost,
-            text: textPost.value + " " + indications.value + " " + zone,
-            timestamp: getCurrentDate(),
+            text: textPost.value + " " + indications.value,
+            zone: zone,
+            date: dates,        
             likes: "0"
         }).then(function (docRef) {
             console.log("Document written with ID: ", docRef.id);
@@ -57,18 +85,37 @@ document.addEventListener("DOMContentLoaded", event => {
 
 
 // Returns the signed-in user's profile pic URL.
-let containerUserData = document.querySelector(".containerUserData");
-let btnProfile = document.getElementById("profile");
+let containerUserData = document.getElementById("profile");
+let btnProfile = document.querySelector(".profile");
 btnProfile.addEventListener('click', () => {
     document.getElementById("publish").innerHTML = "";
+    document.getElementById("home").innerHTML = "";
     // Returns true if a user is signed-in.
-
     function isUserSignedIn() {
         return !!firebase.auth().currentUser;
     }
-    containerUserData.innerHTML += getUserEmail() + '<br>' + getUserName() + '<br>' + `<img src=${getProfilePicUrl()}>`;
+
+    containerUserData.innerHTML +=
+        `<div class="row">
+        <div class="col s12 m7">
+            <div class="card">
+                <div class="card-image">
+                    <img src="${getProfilePicUrl()}"> 
+                </div>
+                <div class="card-content orange accent - 3 white-text center-align">
+                    <p>${getUserName()}</p> 
+                    <p>${getUserEmail()}</p>
+                </div>
+            </div>
+        </div>
+    </div>;`
+    isUserSignedIn()
 });
+
+
 // Returns the signed-in user's display name.
+
+
 function getUserName() {
     return firebase.auth().currentUser.displayName;
 }
@@ -79,6 +126,7 @@ function getUserEmail() {
     return firebase.auth().currentUser.email;
 }
 
+/*
 function getCurrentDate() {
     const d = new Date,
         dformat = [d.getMonth() + 1,
@@ -87,12 +135,9 @@ function getCurrentDate() {
             [d.getHours(),
             d.getMinutes(),
             d.getSeconds()].join(':');
-    return d;
+    return d.toLocaleDateString();
 }
 
-
-
-/*
 //likes
 function likes() {
     if (document.getElementById("iLike").checked) {

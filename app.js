@@ -10,7 +10,6 @@ let uiConfig = {
         uiShown: function () {
             // The widget is rendered.
             // Hide the loader.
-
         }
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
@@ -23,7 +22,6 @@ let uiConfig = {
         firebase.auth.FacebookAuthProvider.PROVIDER_ID,
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
     ],
-
     // Terms of service url.
     tosUrl: 'index.html',
     // Privacy policy url.
