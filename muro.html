@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muro</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -13,6 +14,8 @@
     <section id="paginaMuro" class="paginaMuro">
         <div id="muro" name="muro" class="muro">
     <img id = "choloFoodMuro" src = "https://i.ibb.co/VQpKnZZ/Logo-Sample-By-Tailor-Brands-5-1.jpg">
+</section>
+    <section id="menuVergas" class="menuVergas">
             <ul>
                 <li><a href="#home" id="wall" class="btnhome wall">Muro</a></li>
                 <li><a href="#buscar" class="btnhome search">Buscar</a></li>
@@ -21,51 +24,75 @@
                 <li><a href="#perfil" class="btnhome profile">Perfil</a></li>
             </ul>
         </div>
-    </section>
+</section>
 
-    <section id="wall" class="wall">
+<section id="publish" class="publicars">
+    <label for="publish">¿Que sitio descubriste?</label>
+    <textarea type="textArea" class="post textPost"
+        placeholder="Escribenos tu experiencia, no olvides incuir un # al nombrar el antojito"></textarea>
+    <textarea type="textArea" class="post indications"
+        placeholder="Indicaciones de la ubicacion, ejemplo:frente al Zoologico"></textarea>
+
+    <p>Dinos en que zona se localiza!:
+        <select name="zone">
+            <option class="selectZone" value="Guadalajara">Guadalajara</option>
+            <option class="selectZone" value="Zapopan">Zapopan</option>
+            <option class="selectZone" value="Tlaquepaque">Tlaquepaque</option>
+            <option class="selectZone" value="Tonala">Tonala</option>
+            <option class="selectZone" value="Tlajomulco">Tlajomulco</option>
+        </select>
+    </p>
+
+   <section id="statusOfPost">
+        <label for="statusOfPost">Decide quien puede ver tu post!</label>
+       <input type="radio" class="status" value="Public">Público
+       <input type="radio" class="status" value="Private">Privado
+    </section>
+    
+
+    <section id="wall" class="walli">
         <div id="containerPost" class="containerPost"></div>
     </section>
 
-    <section id="buscar" class="Buscar">
+    <section id="buscar" class="Buscars">
 
     </section>
 
-    <section id="publish" class="publish">
-        <label for="publish">¿Que sitio descubriste?</label>
-        <textarea type="textArea" rows="6" cols="70" class="post textPost"
-            placeholder="Escribenos tu experiencia, no olvides incuir un # al nombrar el antojito"></textarea>
-        <textarea type="textArea" rows="4" cols="50" class="post indications"
-            placeholder="Indicaciones de la ubicacion, ejemplo:frente al Zoologico"></textarea>
+    <button class="btn waves-effect waves-light" type="submit" name="action" id="saveBtn">Compartir
+        <i class="material-icons right"></i>
+      </button>
 
-        <p>Dinos en que zona se localiza!:
-            <select name="zone">
-                <option class="selectZone" value="Guadalajara">Guadalajara</option>
-                <option class="selectZone" value="Zapopan">Zapopan</option>
-                <option class="selectZone" value="Tlaquepaque">Tlaquepaque</option>
-                <option class="selectZone" value="Tonala">Tonala</option>
-                <option class="selectZone" value="Tlajomulco">Tlajomulco</option>
-            </select>
-        </p>
 
-        <section id="statusOfPost">
-            <label for="statusOfPost">Decide quien puede ver tu post!</label>
-            <label><input type="radio" class="status" value="Public">Público</label>
-            <label><input type="radio" class="status" value="Private">Privado</label>
-        </section>
-
-        <button id="saveBtn">Compartir</button>
+ <!-- Switch
+<div class="switch">
+    <label>
+      Privado
+      <input type="checkbox">
+      <span class="lever"></span>
+      Public
+    </label>
+  </div>
+<br>
+        <button class="btn waves-effect waves-light" type="submit" name="action" id="saveBtn">Compartir
+            <i class="material-icons right"></i>
+          </button>
 
     </section>
 
-    <section id="likes" class="likes">
+    <section id="liks" class="liks">
 
     </section>
+    <br>
 
-    <section id="profile" class="profile">
+    <section id="profiles" class="profiles">
         <div id="containerUserData" class="containerUserData"></div>
     </section>
+    <button class="btn waves-effect waves-light" type="submit" name="likes" id="likesBtn">Like
+        <i class="material-icons right"></i>
+      </button>
+       -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>

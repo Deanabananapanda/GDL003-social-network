@@ -22,7 +22,7 @@ ul {
   li a {
     display: inline-block;
     color: black;
-    padding: 14px 16px;
+    padding: 12px 15px;
     text-decoration: none;
   }
   
@@ -35,6 +35,10 @@ ul {
       margin: auto;
   }
 
+  .menuVergas {
+    width: 20%;
+    margin: auto;
+  }
   .wall {
     background-color: rgba(255, 254, 254, 0.24);
     background-image: url("https://images.vexels.com/media/users/3/157400/isolated/preview/b4bca87dcb08043c59bb030665e90030-inicio-con-un-icono-de-coraz--n-negro-by-vexels.png");
@@ -43,8 +47,8 @@ ul {
     background-position: bottom;
     width: 2rem;
     height: 2rem;
-    font-size: .7rem;
-    text-align: top;
+    font-size: .5rem;
+    text-align: top center;
     background: cover;
     font-weight: bold;
 
@@ -77,6 +81,8 @@ ul {
     background: cover;
 
   }
+
+
 
   .likes{
     background-color:rgba(255, 254, 254, 0.24);
@@ -113,3 +119,12 @@ ul {
     width: 30rem;
     height: 30rem;
   }
+  .card {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    margin: 20rem;
+    background-image: linear-gradient(to right, rgba(248, 113, 113, 0.37),rgba(255, 194, 80, 0.144),rgba(250, 250, 0, 0.158),rgba(88, 214, 88, 0.199),rgba(5, 167, 231, 0.164),rgba(76, 0, 130, 0.171));
+  }
+  
+
+  
